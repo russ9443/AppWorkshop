@@ -88,7 +88,7 @@
     {
       "name": "vNetDeploy",
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2017-05-10",
       "dependsOn": [],
       "properties": {
         "mode": "Incremental",
@@ -104,7 +104,7 @@
     {
       "name": "DevWorkstation",
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2017-05-10",
       "dependsOn": [ "vNetDeploy", "WebSrv", "SqlSrv" ],
       "properties": {
         "mode": "Incremental",
@@ -134,7 +134,7 @@
     {
       "name": "WebSrv",
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2017-05-10",
       "dependsOn": [ "vNetDeploy" ],
       "properties": {
         "mode": "Incremental",
@@ -158,7 +158,7 @@
     {
       "name": "SqlSrv",
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2017-05-10",
       "dependsOn": [ "vNetDeploy" ],
       "properties": {
         "mode": "Incremental",
