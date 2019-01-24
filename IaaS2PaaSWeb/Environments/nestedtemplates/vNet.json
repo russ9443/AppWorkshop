@@ -8,9 +8,9 @@
     }
   },
   "variables": {
-    "vNetPrefix": "172.16.20.0/24",
+    "vNetPrefix": "172.16.10.0/24",
     "vNetSubnet1Name": "Subnet-1",
-    "vNetSubnet1Prefix": "172.16.20.0/25"
+    "vNetSubnet1Prefix": "172.16.10.0/25"
   },
   "resources": [
     {
