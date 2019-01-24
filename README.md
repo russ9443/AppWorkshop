@@ -1,10 +1,10 @@
 # Deployment of workshop environment.
 
-[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+#[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
-<a href="https://azuredeploy.net/?repository=https://github.com/ArthurCh/AppWorkshop" target="_blank">
-    <img src="http://azuredeploy.net/deploybutton.png"/>
-</a>
+#<a href="https://azuredeploy.net/?repository=https://github.com/ArthurCh/AppWorkshop" target="_blank">
+#    <img src="http://azuredeploy.net/deploybutton.png"/>
+#</a>
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FArthurCh%2FAppWorkshop%2Fmaster%2FIaaS2PaaSWeb%2FEnvironments%2FWorkshopEnv.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
