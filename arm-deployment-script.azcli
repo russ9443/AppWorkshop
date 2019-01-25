@@ -2,15 +2,18 @@
 az account list --output table
 
 #Select a default subscription
+echo
 read -p "Select Subscription Name for lab: " subName
 az account set --subscription "$subName" --verbose
 az account list --output tsv --query "[?isDefault].name"
 
 #Create resource group
+echo
 read -p "Enter Resources Group Name for Deployment: " rgname
 az group create --location westus2 --resource-group "$rgname"
 
 #Deploy FULL Azure Infra with Azure CLI and ARM
+echo
 read -p "Enter Deployment name: " dplyname
 read -p "Enter the RAWS URI to WorkshopEnv.json (Ex: https://raw.githubusercontent.com/<username>/AppWorkshop/master/IaaS2PaaSWeb/Environments/WorkshopEnv.json): " uriWorkshopenv
 
@@ -18,8 +21,8 @@ echo
 echo "Subscription Name for lab: " "$subName"
 echo "Resources Group Name for Deployment: " "$rgname"
 echo "Deployment name: " "$dplyname"
-echo "Enter the RAWS URI to WorkshopEnv.json: " "$uriWorkshopenv"
-
+echo "RAWS Github URI to WorkshopEnv.json: " "$uriWorkshopenv"
+echo
 az group deployment create --verbose --name "$dplyname" --resource-group "$rgname" --template-uri "$uriWorkshopenv"
 
 #Reference
