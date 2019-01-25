@@ -10,10 +10,7 @@
   "variables": {
     "vNetPrefix": "172.16.10.0/24",
     "vNetSubnet1Name": "Subnet-1",
-    "vNetSubnet1Prefix": "172.16.10.0/25",
-    "vNetSubnet2Name": "Subnet-2",
-    "vNetSubnet2Prefix": "172.16.10.128/25",
-
+    "vNetSubnet1Prefix": "172.16.10.0/25"
   },
   "resources": [
     {
@@ -36,12 +33,6 @@
             "name": "[variables('vNetSubnet1Name')]",
             "properties": {
               "addressPrefix": "[variables('vNetSubnet1Prefix')]"
-            }
-          },
-          {
-            "name": "[variables('vNetSubnet2Name')]",
-            "properties": {
-              "addressPrefix": "[variables('vNetSubnet2Prefix')]"
             }
           }
         ]
