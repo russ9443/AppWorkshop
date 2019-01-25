@@ -105,7 +105,7 @@
       "name": "DevWorkstation",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2017-05-10",
-      "dependsOn": [ "vNetDeploy", "WebSrv", "SqlSrv" ],
+      "dependsOn": [ "vNetDeploy" ],
       "properties": {
         "mode": "Incremental",
         "templateLink": {
