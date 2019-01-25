@@ -15,20 +15,7 @@ Create a resource group.  The deployment will require an existing resource group
 
 ## Deployment steps
 
-#List of subscription in this Azure account
-az account list --output table
-
-#Select a default subscription
-read -p "Subscription Name for lab>>" subName
-az account set --subscription "$subName" --verbose
-az account list --output tsv --query "[?isDefault].name"
-
-#Create resource group
-az group create --location westus2 --resource-group mtab-tracka-rg --name mtab-tracka-rg-dplyn
-
-#Deploy FULL Azure Infra with Azure CLI and ARM
-az group deployment create --name WorkshopEnv00 --resource-group mta-boise-tracka-rg --template-uri https://raw.githubusercontent.com/<your git username>AppWorkshop/master/IaaS2PaaSWeb/Environments/WorkshopEnv.json 
-
+Execute the AzCLI commands int eh arm-deployment-script.azcli file
 
 Optional: Enter vm admin username and password
 
