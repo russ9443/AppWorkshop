@@ -1,0 +1,13 @@
+#List of subscription in this Azure account
+az account list --output table
+
+#Select a default subscription
+read -p "Subscription Name for lab>>" subName
+az account set --subscription "$subName" --verbose
+az account list --output tsv --query "[?isDefault].name"
+
+#Create resource group
+az group create --location westus2 --resource-group mtab-tracka-rg --name mtab-tracka-rg-dplyn
+
+#Deploy FULL Azure Infra with Azure CLI and ARM
+az group deployment create --verbose --name WorkshopEnv00 --resource-group mtab-tracka-rg --template-uri https://raw.githubusercontent.com/ArthurCh/AppWorkshop/master/IaaS2PaaSWeb/Environments/WorkshopEnv.json
